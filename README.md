@@ -1,4 +1,4 @@
-# 1.PCM2WAV
+## 1.PCM2WAV
 ```
 input_dir=$1
 
