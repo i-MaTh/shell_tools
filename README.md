@@ -10,10 +10,27 @@ done
 
 ## 2.Resampling wav
 ```
-    sox -t wav ${input_wav_filepath} "-G" "-r" "16000" "-b" "16" "-c" "1" ${output_wav_filepath}
+sox -t wav ${input_wav_filepath} "-G" "-r" "16000" "-b" "16" "-c" "1" ${output_wav_filepath}
 ```
 
-## 3.Tensorboard
+## 3.m4a2wav
+```
+avconv -i ${input_wav_filepath} ${output_wav_filepath}
+```
+
+## 4. shell list
+```
+speaker_list=(
+xiaoming
+xiaohong
+)
+
+for speaker in ${speaker_list[*]};do
+    echo $speaker
+done
+```
+
+## 5.Tensorboard
 ```
 port=1024
 netstat -nap | grep ${port} | grep LISTEN | awk '{print $7}' | awk -F '/' '{prinnt "kill -9 "$1}' | sh
