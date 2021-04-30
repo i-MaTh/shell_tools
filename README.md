@@ -37,3 +37,13 @@ netstat -nap | grep ${port} | grep LISTEN | awk '{print $7}' | awk -F '/' '{prin
 tensorboard --port ${port} --logdir new_name:events_logdir
 ```
 
+## 6.Random copy by shell
+```
+ls | shuf -n 100 | xargs -i cp {} ${output_dir}
+```
+
+
+
+
+
+
