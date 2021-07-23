@@ -42,8 +42,19 @@ tensorboard --port ${port} --logdir new_name:events_logdir
 ls | shuf -n 100 | xargs -i cp {} ${output_dir}
 ```
 
-
-
+## 7.Batch remove file
+```
+ for speaker_name in $(ls ${root_dir});do
+     outdir=path
+     ls $outdir | wc -l
+     for file in $(ls ${outdir})};do
+         if [[ $file = *.txt ]];then
+             echo "delete $outdir/$file"
+             rm -rf $outdir/$file
+         fi
+     done
+ done
+```
 
 
 
